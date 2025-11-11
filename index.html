@@ -348,11 +348,6 @@
                 trail.style.opacity = '0';
             }, 1000);
         });
-
-        // Функция показа психоделического Колобка (1-2 секунды)
-        function showGhostImage() {
-            const ghost = document.getElementById('ghostImage');
-            const signal = document.getElementById('signal');
             
             // Случайные глитч-эффекты
             const glitches = [
@@ -362,26 +357,6 @@
                 () => {
                     ghost.style.filter = 'hue-rotate(320deg) contrast(500%)';
                     ghost.style.transform = 'translate(-50%, -50%) scale(1.3) rotate(8deg)';
-                }
-            ];
-            
-            // Показываем картинку на 1-2 секунды с глитчами
-            ghost.style.opacity = '0.9';
-            
-            // Применяем случайные глитчи
-            const randomGlitch = glitches[Math.floor(Math.random() * glitches.length)];
-            randomGlitch();
-            
-            // Скрываем через 1.5 секунды
-            setTimeout(() => {
-                ghost.style.opacity = '0';
-                // Возвращаем нормальные настройки
-                setTimeout(() => {
-                    ghost.style.filter = 'hue-rotate(90deg) contrast(200%) saturate(200%)';
-                    ghost.style.transform = 'translate(-50%, -50%) scale(0.8)';
-                }, 500);
-            }, 1500);
-        }
 
         // Функция системной ошибки (розыгрыш)
         function showSystemError() {
