@@ -1,411 +1,195 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="windows-1251">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>СИСТЕМНЫЙ АРХИВ: КОЛОБОК</title>
+    <title>ТАЙНЫ КОЛОБКА - Запретные знания</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Courier New', monospace;
-            background-color: #0a0a0a;
-            color: #00ff00;
+            background-color: #000000;
+            color: #00FF00;
+            font-family: "Comic Sans MS", "Arial", sans-serif;
             margin: 0;
-            padding: 30px;
-            line-height: 1.8;
-            font-size: 18px;
-            min-height: 100vh;
-            overflow-x: hidden;
-            background-image: 
-                url('data:image/png;base64,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'),
-                linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%, #000000),
-                linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%, #000000);
-            background-size: 4px 4px, 16px 16px, 16px 16px;
-            background-position: 0 0, 0 0, 8px 8px;
-        }
-        
-        .error-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                repeating-linear-gradient(0deg, rgba(255,0,0,0.1) 0px, rgba(255,0,0,0.1) 1px, transparent 1px, transparent 2px),
-                repeating-linear-gradient(90deg, rgba(255,0,0,0.1) 0px, rgba(255,0,0,0.1) 1px, transparent 1px, transparent 2px);
-            pointer-events: none;
-            opacity: 0.3;
-            z-index: 50;
-        }
-        
-        .system-error {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #ff0000, #8b0000, #ff0000);
-            color: #ffffff;
-            z-index: 1000;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
             padding: 20px;
-            font-family: Arial, sans-serif;
+            background-image: url('data:image/png;base64,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');
+            cursor: url('data:image/x-icon;base64,AAACAAEAICACAAcABQAwAQAAFgAAACgAAAAgAAAAQAAAAAEAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA//8AAA=='), auto;
         }
         
-        .error-content {
-            background: rgba(0, 0, 0, 0.9);
-            padding: 40px;
-            border: 3px solid #fff;
-            border-radius: 10px;
-            max-width: 600px;
-            box-shadow: 0 0 50px rgba(255, 0, 0, 0.7);
-        }
-        
-        .error-title {
-            font-size: 3em;
-            color: #ff0000;
-            margin-bottom: 20px;
-            text-shadow: 0 0 10px #ff0000;
-            animation: errorGlitch 0.3s infinite;
-        }
-        
-        .error-message {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        
-        .error-details {
-            font-size: 1.2em;
-            color: #cccccc;
-            margin-bottom: 20px;
-        }
-        
-        .progress-bar {
-            width: 100%;
-            height: 20px;
-            background: #333;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 20px 0;
-        }
-        
-        .progress {
-            width: 0%;
-            height: 100%;
-            background: linear-gradient(90deg, #ff0000, #ff6666);
-            transition: width 10s linear;
-        }
-        
-        .countdown {
-            font-size: 2em;
-            color: #ff0000;
-            font-weight: bold;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 3em;
-            text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-            border-bottom: 1px dashed #00ff00;
-            padding-bottom: 10px;
-            animation: glitch 5s infinite;
-            margin-bottom: 30px;
-        }
-        
-        .theory {
-            background-color: rgba(10, 20, 10, 0.9);
-            border: 1px solid #333;
-            padding: 30px;
-            margin-bottom: 40px;
-            border-radius: 5px;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 3px solid #FF0000;
+            padding: 20px;
+            background-color: #111111;
             position: relative;
-            overflow: hidden;
-            border-left: 5px solid #00ff00;
         }
         
-        .theory::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(transparent 50%, rgba(0, 255, 0, 0.05) 50%);
-            background-size: 100% 4px;
-            z-index: -1;
-            animation: scanline 10s linear infinite;
-        }
-        
-        h2 {
-            color: #ffff00;
-            border-left: 5px solid #ffff00;
-            padding-left: 15px;
-            margin-bottom: 20px;
-            font-size: 2em;
-        }
-        
-        .disclaimer {
-            font-size: 1em;
-            color: #888;
+        .header {
             text-align: center;
-            margin-top: 50px;
-            border-top: 1px dashed #333;
-            padding-top: 20px;
+            border-bottom: 2px dashed #00FF00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
         
         .blink {
-            animation: blink 1s step-end infinite;
-            color: red;
+            animation: blink 2s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .menu {
+            background-color: #330000;
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid #FF0000;
+        }
+        
+        .menu a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 15px;
             font-weight: bold;
         }
         
-        .noise {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('data:image/png;base64,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');
-            opacity: 0.05;
-            pointer-events: none;
-            z-index: 100;
+        .menu a:hover {
+            color: #FF0000;
+            text-decoration: underline;
         }
         
-        .cursor-trail {
-            position: fixed;
-            width: 10px;
-            height: 10px;
-            background-color: #00ff00;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 99;
-            opacity: 0;
-            transition: opacity 0.3s;
+        .content {
+            line-height: 1.6;
         }
         
-        .ghost-image {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0.8);
-            max-width: 500px;
-            max-height: 500px;
-            opacity: 0;
-            pointer-events: none;
-            z-index: 999;
-            filter: hue-rotate(90deg) contrast(200%) saturate(200%);
-            transition: opacity 0.5s ease-in-out;
-            border: 3px solid #ff0000;
-            box-shadow: 0 0 30px #ff0000;
-            border-radius: 10px;
-        }
-
-        .floating-error {
+        .easter-egg {
+            color: #330000;
+            font-size: 1px;
             position: absolute;
-            color: #ff0000;
-            font-size: 0.9em;
-            opacity: 0.7;
-            animation: floatError 10s linear infinite;
-        }
-
-        @keyframes blink {
-            50% { opacity: 0; }
+            bottom: 5px;
+            right: 5px;
         }
         
-        @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-            100% { transform: translate(0); }
+        .easter-egg:hover {
+            color: #FF0000;
+            font-size: 12px;
         }
         
-        @keyframes scanline {
-            0% { background-position: 0 0; }
-            100% { background-position: 0 100%; }
+        .blood-text {
+            color: #FF0000;
+            text-shadow: 0 0 5px #FF0000;
+            font-family: "Times New Roman", serif;
         }
         
-        @keyframes errorGlitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-3px, 3px); }
-            40% { transform: translate(-3px, -3px); }
-            60% { transform: translate(3px, 3px); }
-            80% { transform: translate(3px, -3px); }
-            100% { transform: translate(0); }
+        .counter {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            font-size: 10px;
+            color: #333333;
         }
         
-        @keyframes floatError {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.7;
-            }
-            90% {
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
+        marquee {
+            background-color: #330000;
+            color: #FFFFFF;
+            padding: 5px;
+            border: 1px solid #FF0000;
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
-    <div class="noise"></div>
-    <div class="error-overlay"></div>
-    <div class="cursor-trail" id="cursorTrail"></div>
-    
-    <!-- Системная ошибка для розыгрыша -->
-    <div class="system-error" id="systemError">
-        <div class="error-content">
-            <div class="error-title">🚨 CRITICAL SYSTEM ERROR 🚨</div>
-            <div class="error-message">
-                ВАША СИСТЕМА БЫЛА СКОМПРОМЕТИРОВАНА<br>
-                ОБНАРУЖЕНА ВРЕДОНОСНАЯ ПРОГРАММА: TROJAN.KOLOBOK.666
+    <div class="container">
+        <div class="header">
+            <h1>🎭 <span class="blink">ТАЙНЫ КОЛОБКА</span> 🎭</h1>
+            <p><em>Добро пожаловать в запретную зону знаний</em></p>
+        </div>
+        
+        <marquee behavior="scroll" direction="left">
+            ⚠️ ВНИМАНИЕ: Сайт находится под наблюдением Ордена 91 ⚠️
+        </marquee>
+        
+        <div class="menu">
+            <a href="index.html">Главная</a> | 
+            <a href="theory.html">Теории</a> | 
+            <a href="agreement.html" id="agreementLink">Соглашение</a> | 
+            <a href="contact.html">Контакты</a>
+        </div>
+        
+        <div class="content">
+            <h2>👁️ Добро пожаловать, искатель истины!</h2>
+            <p>Этот сайт создан для тех, кто не боится смотреть правде в глаза. Здесь мы исследуем самые тёмные тайны русских народных сказок.</p>
+            
+            <h3>🔮 Основные разделы:</h3>
+            <ul>
+                <li>📖 <a href="theory.html">Запретные теории</a> - то, что от вас скрывали</li>
+                <li>📜 <a href="agreement.html">Пользовательское соглашение</a> - обязательно к прочтению!</li>
+                <li>📞 <a href="contact.html">Связь с нами</a> - если вы готовы к большему</li>
+            </ul>
+            
+            <div style="background: #330000; padding: 15px; margin: 20px 0; border: 2px solid #FF0000;">
+                <h3 class="blood-text">💀 ПРЕДУПРЕЖДЕНИЕ ОРДЕНА 91:</h3>
+                <p>Некоторые знания не предназначены для слабых умов. Продолжая, вы принимаете последствия.</p>
+                <p class="blood-text">"Тот, кто ищет истину, должен быть готов потерять всё"</p>
             </div>
-            <div class="error-details">
-                ИДЕТ ЗАГРУЗКА ДАННЫХ НА УДАЛЕННЫЙ СЕРВЕР...<br>
-                НЕ ВЫКЛЮЧАЙТЕ КОМПЬЮТЕР!
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" 
+                     width="400" height="1" 
+                     style="border: 1px solid #FF0000; background: #330000;" 
+                     alt="Скрытое изображение">
+                <p><small>Изображение скрыто по приказу Ордена</small></p>
             </div>
-            <div class="progress-bar">
-                <div class="progress" id="virusProgress"></div>
-            </div>
-            <div class="countdown" id="countdown">10</div>
+        </div>
+        
+        <div class="easter-egg" title="Наведи сюда...">91</div>
+        
+        <div class="counter">
+            Посетителей: 666
         </div>
     </div>
-    
-    <!-- Психоделический Колобок -->
-    <img id="ghostImage" class="ghost-image" src="https://i.ibb.co/6W02h3M/scale-1200.png" alt="Запретное знание">
-
-    <h1>🌀 СИСТЕМНЫЙ АРХИВ: "КОЛОБОК" 🌀</h1>
-    <p><em>// ЗАГРУЗКА ЕДИНСТВЕННОЙ ИСТИНЫ... ОШИБОК: 247</em></p>
-
-    <div class="theory">
-        <h2>ТЕОРИЯ №1: Метафизическая Мука и Запретный Кисломолочный Симбиоз</h2>
-        <p>Так вот смотрите. Все врут. Колобок — это не просто пирожок. Это первая клонированная форма жизни. Дед — это Адам. Бабка — Ева. Но Ева была бесплодна! Откуда яйца для теста? А яйца это не куриные. Это... энергетические сферы, которые Дед украл из Эдемского Хранилища Планеты Нибиру. А мука? Это не мука. Это измельченные кости аннунаков, которыми они засеяли Землю для своих экспериментов. Бабка по сути слепила гомункула из праха инопланетян и космической энергии. А сметана и молоко? Это формула вечной жизни, которую они пытались повторить! Колобок сбежал не потому, что глупый. Его забрали СИЛЫ НЕБЕСНЫЕ, потому что люди вновь покусились на божественное.</p>
-    </div>
-
-    <p class="disclaimer">
-        ВНИМАНИЕ! ДОСТУП К АРХИВУ ОГРАНИЧЕН.<br>
-        <span class="blink">ОБНАРУЖЕНА УТЕЧКА ДАННЫХ</span><br>
-        <span id="signal">СТАТУС СИСТЕМЫ: КРИТИЧЕСКИЙ</span>
-    </p>
 
     <script>
-        // Создаем плавающие ошибки
-        function createFloatingErrors() {
-            const errors = [
-                'ERROR 0xK0L0B0K', 'SYSTEM FAILURE', 'DATA CORRUPT', 
-                'ACCESS DENIED', 'MEMORY LEAK', 'VIRUS DETECTED',
-                'KERNEL PANIC', 'SEGMENTATION FAULT', 'BUFFER OVERFLOW'
-            ];
-            
-            for (let i = 0; i < 15; i++) {
-                const error = document.createElement('div');
-                error.className = 'floating-error';
-                error.textContent = errors[Math.floor(Math.random() * errors.length)];
-                error.style.left = Math.random() * 100 + 'vw';
-                error.style.animationDelay = Math.random() * 20 + 's';
-                error.style.fontSize = (Math.random() * 12 + 8) + 'px';
-                document.body.appendChild(error);
+        // Жуткие эффекты при наведении на соглашение
+        document.getElementById('agreementLink').addEventListener('mouseover', function() {
+            this.style.color = '#FF0000';
+            this.style.textShadow = '0 0 10px #FF0000';
+        });
+        
+        document.getElementById('agreementLink').addEventListener('mouseout', function() {
+            this.style.color = '#FFFFFF';
+            this.style.textShadow = 'none';
+        });
+        
+        // Случайные мерцания
+        setInterval(function() {
+            if (Math.random() > 0.7) {
+                document.body.style.backgroundColor = '#110000';
+                setTimeout(function() {
+                    document.body.style.backgroundColor = '#000000';
+                }, 100);
             }
-        }
-
-        // Случайные глитчи текста
-        function glitchText() {
-            const elements = document.querySelectorAll('p, h1, h2, .disclaimer');
-            elements.forEach(el => {
-                if (Math.random() < 0.15) {
-                    const originalText = el.innerText;
-                    el.innerText = originalText.split('').sort(() => 0.5 - Math.random()).join('');
-                    setTimeout(() => {
-                        el.innerText = originalText;
-                    }, 100);
-                }
-            });
-        }
-
-        // След от курсора
-        document.addEventListener('mousemove', (e) => {
-            const trail = document.getElementById('cursorTrail');
-            trail.style.left = e.pageX - 5 + 'px';
-            trail.style.top = e.pageY - 5 + 'px';
-            trail.style.opacity = '0.7';
-            setTimeout(() => {
-                trail.style.opacity = '0';
+        }, 3000);
+        
+        // Пасхалка при тройном клике
+        let clickCount = 0;
+        document.addEventListener('click', function() {
+            clickCount++;
+            if (clickCount >= 3) {
+                setTimeout(function() {
+                    if (clickCount >= 3) {
+                        document.body.innerHTML = '<div style="background:black;color:red;text-align:center;padding:50px;font-size:24px;">ОРДЕН 91 ВИДИТ ТЕБЯ<br><span style="font-size:12px;">Тройной клик активирован</span></div>';
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    }
+                }, 1000);
+            }
+            setTimeout(function() {
+                clickCount = 0;
             }, 1000);
         });
-            
-            // Случайные глитч-эффекты
-            const glitches = [
-                () => ghost.style.filter = 'hue-rotate(180deg) contrast(300%) saturate(300%) blur(1px)',
-                () => ghost.style.filter = 'hue-rotate(270deg) contrast(250%) invert(1) blur(2px)',
-                () => ghost.style.filter = 'hue-rotate(90deg) contrast(400%) blur(3px) sepia(1)',
-                () => {
-                    ghost.style.filter = 'hue-rotate(320deg) contrast(500%)';
-                    ghost.style.transform = 'translate(-50%, -50%) scale(1.3) rotate(8deg)';
-
-        // Функция системной ошибки (розыгрыш)
-        function showSystemError() {
-            const errorScreen = document.getElementById('systemError');
-            const progress = document.getElementById('virusProgress');
-            const countdown = document.getElementById('countdown');
-            
-            // Показываем экран ошибки
-            errorScreen.style.display = 'flex';
-            
-            // Запускаем прогресс-бар
-            progress.style.width = '100%';
-            
-            // Обратный отсчет
-            let seconds = 10;
-            const countdownInterval = setInterval(() => {
-                countdown.textContent = seconds;
-                seconds--;
-                
-                if (seconds < 0) {
-                    clearInterval(countdownInterval);
-                    errorScreen.style.display = 'none';
-                    progress.style.width = '0%';
-                }
-            }, 1000);
-        }
-
-        // Инициализация
-        createFloatingErrors();
-        setInterval(glitchText, 500);
-        setInterval(showGhostImage, 15000); // Каждые 15 секунд
-        setInterval(showSystemError, 60000); // Каждую минуту
-
-        // Случайные дополнительные эффекты
-        setInterval(() => {
-            if (Math.random() < 0.3) {
-                showGhostImage();
-            }
-        }, 30000);
-
-        // Случайные глитчи всего экрана
-        setInterval(() => {
-            if (Math.random() < 0.1) {
-                document.body.style.transform = 'translate(' + (Math.random() * 6 - 3) + 'px, ' + (Math.random() * 6 - 3) + 'px)';
-                setTimeout(() => {
-                    document.body.style.transform = 'translate(0, 0)';
-                }, 50);
-            }
-        }, 2000);
     </script>
 </body>
 </html>
