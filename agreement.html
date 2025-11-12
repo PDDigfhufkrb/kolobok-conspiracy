@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="windows-1251">
+    <title>СОГЛАШЕНИЕ - Тайны Колобка</title>
+    <style>
+        body {
+            background: #000000 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==') repeat;
+            color: #FF0000;
+            font-family: "Times New Roman", serif;
+            margin: 0;
+            padding: 20px;
+            text-align: justify;
+        }
+        
+        .blood-background {
+            background-color: #330000;
+            padding: 30px;
+            border: 5px double #FF0000;
+            max-width: 600px;
+            margin: 50px auto;
+            position: relative;
+        }
+        
+        .blood-drip {
+            position: absolute;
+            width: 2px;
+            height: 100px;
+            background: linear-gradient(to bottom, #FF0000, #330000);
+            animation: drip 3s infinite;
+        }
+        
+        @keyframes drip {
+            0% { height: 0; opacity: 1; }
+            100% { height: 100px; opacity: 0; }
+        }
+        
+        h1 {
+            text-align: center;
+            text-shadow: 0 0 10px #FF0000;
+            border-bottom: 1px solid #FF0000;
+            padding-bottom: 10px;
+        }
+        
+        .clause {
+            margin: 20px 0;
+            padding: 10px;
+            border-left: 3px solid #FF0000;
+        }
+        
+        .hidden-message {
+            color: #330000;
+            font-size: 2px;
+        }
+        
+        .hidden-message:hover {
+            color: #FF0000;
+            font-size: 14px;
+        }
+        
+        .accept-btn {
+            background: #FF0000;
+            color: #000000;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: url('data:image/x-icon;base64,AAACAAEAICACAAcABQAwAQAAFgAAACgAAAAgAAAAQAAAAAEAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA///AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA/P8AAPz/AAD8/wAA//8AAA=='), auto;
+            display: block;
+            margin: 30px auto;
+            text-transform: uppercase;
+        }
+        
+        .accept-btn:hover {
+            background: #FFFFFF;
+            color: #FF0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="blood-background">
+        <!-- Кровавые подтёки -->
+        <div class="blood-drip" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="blood-drip" style="left: 30%; animation-delay: 1s;"></div>
+        <div class="blood-drip" style="left: 70%; animation-delay: 2s;"></div>
+        <div class="blood-drip" style="left: 90%; animation-delay: 1.5s;"></div>
+        
+        <h1>📜 ДОГОВОР ДУШИ 📜</h1>
+        
+        <div class="clause">
+            <h3>Статья 1: Принятие последствий</h3>
+            <p>Нажимая "Принимаю", вы добровольно отказываетесь от права на неведение и принимаете все последствия открывшихся знаний.</p>
+        </div>
+        
+        <div class="clause">
+            <h3>Статья 2: Права Ордена 91</h3>
+            <p>Орден 91 получает право наблюдать за вашими действиями и влиять на ваше восприятие реальности.</p>
+        </div>
+        
+        <div class="clause">
+            <h3>Статья 3: Плата за знание</h3>
+            <p>За каждый полученный секрет вы платите частичкой своей души. Полная оплата взимается после смерти.</p>
+        </div>
+        
+        <div class="clause">
+            <h3>Статья 4: Вечная служба</h3>
+            <p>Ваша душа переходит в вечное распоряжение Ордена 91 после завершения земного пути.</p>
+        </div>
+        
+        <div class="clause">
+            <h3>Статья 5: Молчание</h3>
+            <p>Разглашение полученных знаний карается немедленным взысканием всей оставшейся души.</p>
+        </div>
+        
+        <div class="hidden-message">
+            Школа 91 видит тебя. Ты стал одним из нас. Код: КОЛОБОК-91-ОРДЕН
+        </div>
+        
+        <button class="accept-btn" onclick="acceptAgreement()">ПРИНИМАЮ СВОЮ СУДЬБУ</button>
+        
+        <p style="text-align: center; font-size: 10px; margin-top: 30px;">
+            *Нажатие кнопки является юридически обязательным в 91 измерении
+        </p>
+    </div>
+
+    <script>
+        function acceptAgreement() {
+            // Жуткие эффекты при принятии
+            document.body.style.background = '#FF0000';
+            document.body.style.color = '#000000';
+            
+            // Вибрация (если поддерживается)
+            if (navigator.vibrate) {
+                navigator.vibrate([200, 100, 200]);
+            }
+            
+            // Сообщение
+            setTimeout(function() {
+                alert('ДУША ПРИНЯТА ОРДЕНОМ 91\nДобро пожаловать в ряды избранных');
+                window.location.href = 'theory.html';
+            }, 1000);
+        }
+        
+        // Случайные кровавые надписи
+        setInterval(function() {
+            const bloodText = document.createElement('div');
+            bloodText.style.position = 'fixed';
+            bloodText.style.left = Math.random() * 80 + '%';
+            bloodText.style.top = Math.random() * 80 + '%';
+            bloodText.style.color = '#FF0000';
+            bloodText.style.fontSize = '20px';
+            bloodText.style.zIndex = '1000';
+            bloodText.style.opacity = '0.7';
+            bloodText.innerText = '91';
+            bloodText.style.animation = 'fadeOut 2s forwards';
+            
+            document.body.appendChild(bloodText);
+            
+            setTimeout(function() {
+                document.body.removeChild(bloodText);
+            }, 2000);
+        }, 3000);
+    </script>
+    
+    <style>
+        @keyframes fadeOut {
+            from { opacity: 0.7; transform: scale(1); }
+            to { opacity: 0; transform: scale(3); }
+        }
+    </style>
+</body>
+</html>
